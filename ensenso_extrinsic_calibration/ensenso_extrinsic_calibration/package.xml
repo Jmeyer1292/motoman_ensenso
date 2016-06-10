@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ensenso_extrinsic_calibration</name>
+  <version>0.1.0</version>
+  <description>Ensenso extrinsic calibration procedures.</description>
+  <author>Victor Lamoine - Institut Maupertuis</author>
+  <maintainer email="victor.lamoine@gmail.com">Victor Lamoine</maintainer>
+  <license>BSD</license>
+
+  <url type="website">https://github.com/InstitutMaupertuis/ensenso_extrinsic_calibration/blob/indigo-devel/README.md</url>
+  <url type="bugtracker">https://github.com/InstitutMaupertuis/ensenso_extrinsic_calibration/issues</url>
+  <url type="repository">https://github.com/InstitutMaupertuis/ensenso_extrinsic_calibration/</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>ros_industrial</exec_depend>
+  <exec_depend>fanuc</exec_depend>
+  <exec_depend>fanuc_experimental</exec_depend>
+  <exec_depend>institut_maupertuis_robots_decriptions</exec_depend>
+
+  <export>
+    <metapackage/>
+    <architecture_independent/>
+    <rosindex>
+      <tags>
+        <tag>metapackage</tag>
+        <tag>fanuc</tag>
+        <tag>industrial</tag>
+        <tag>ros-industrial</tag>
+        <tag>grinding</tag>
+		<tag>calibration</tag>
+      </tags>
+    </rosindex>
+  </export>
+</package>

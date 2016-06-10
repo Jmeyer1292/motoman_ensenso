@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ensenso_rviz_plugin</name>
+  <version>0.1.0</version>
+  <description>RViz plugin to perform extrinsic calibration of an Ensenso 3D camera mounted on a robot arm.</description>
+  <author>Victor Lamoine - Institut Maupertuis</author>
+  <maintainer email="victor.lamoine@gmail.com">Victor Lamoine</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rviz</build_depend>
+  <build_depend>grinding_ensenso_extrinsic_calibration</build_depend>
+
+  <exec_depend>rviz</exec_depend>
+  <exec_depend>grinding_ensenso_extrinsic_calibration</exec_depend>
+  <export>
+      <rviz plugin="${prefix}/plugin_description.xml"/>
+  </export>
+</package>

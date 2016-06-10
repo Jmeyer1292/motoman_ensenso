@@ -1,0 +1,5 @@
+uint8 number_of_poses
+float64 calibration_plate_distance
+---
+bool return_status
+string return_message

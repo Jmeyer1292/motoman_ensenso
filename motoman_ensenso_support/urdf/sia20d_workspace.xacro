@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<robot name="sia20d_workspace" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find motoman_sia20d_support)/urdf/sia20d_macro.xacro"/>
+  <xacro:include filename="$(find motoman_ensenso_support)/urdf/workspace_components_swri.xacro"/>
+  <xacro:include filename="$(find ensenso_n35_description)/urdf/ensenso_n35_macro.xacro"/>
+  
+  <!-- property list -->
+  <!-- <xacro:property name="workcell_height" value="1"/> -->
+  
+  <xacro:property name="coupler_z" value="0.035"/>
+  <xacro:property name="coupler_x" value="0.05"/>
+
+  <!-- instantiating workcell definitions; Also creates world reference frame -->
+  <xacro:workcell_swri_zone1_components/>
+
+  <!-- instantiating arm  --> 
+  <xacro:motoman_sia20d prefix=""/>
+
+  <!-- instantiating end effector -->
+  <xacro:ensenso_n35 prefix=""/>
+
+  <!-- Connect tool0 to the end effector -->
+  <link name="int_eff_link"/>
+  <joint name="link_t_to_int" type="fixed">
+    <parent link="tool0"/>
+    <child link="int_eff_link"/>
+    <origin xyz="0 0 0.04" rpy="${-3.14159/2.0} 0.0 0.45"/>
+  </joint>
+  
+  <joint name="int_to_eff" type="fixed">
+    <parent link="int_eff_link"/>
+    <child link="ensenso_n35_frame"/>
+    <origin xyz="0 0 0.05" rpy="0 0 0.0"/>
+  </joint>
+  
+  <!-- Connect the world_frame (defined in workcell components) and the robot -->
+  <joint name="world_to_base" type="fixed">
+    <parent link="world_frame"/>
+    <child link="base_link"/>
+    <origin xyz="0.241 0 0" rpy="0 0 0"/>
+  </joint>
+
+</robot>

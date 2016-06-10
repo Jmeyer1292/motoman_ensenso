@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find ensenso_n35_description)/urdf/ensenso_n35.xacro'" />
+</launch>

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="ensenso_n35">
+  <xacro:include filename="$(find ensenso_n35_description)/urdf/ensenso_n35_macro.xacro"/>
+  <xacro:ensenso_n35 prefix=""/>
+</robot>

@@ -1,0 +1,7 @@
+uint8 number_of_poses
+float64 grid_spacing
+float64 calibration_plate_distance
+bool store_to_EEPROM
+---
+bool return_status
+string return_message

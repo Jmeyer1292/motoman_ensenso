@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="ensenso_n35" params="prefix">
+    <link name="${prefix}ensenso_n35_frame">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://ensenso_n35_description/meshes/visual/ensenso.dae"/>
+        </geometry>
+        <material name="blue">
+          <color rgba="0.032 0.127 0.871 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://ensenso_n35_description/meshes/collision/ensenso.stl"/>
+        </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+</robot>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<library path="lib/libensenso_rviz_plugin">
+  <class name="ensenso_rviz_plugin/Ensenso"
+         type="ensenso_rviz_plugin::EnsensoPanel"
+         base_class_type="rviz::Panel">
+    <description>
+      A panel widget allowing extrinsic calibration of Ensenso cameras.
+    </description>
+  </class>
+</library>
